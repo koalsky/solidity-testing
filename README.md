@@ -10,4 +10,6 @@ this project is released under the [MIT license](LICENSE).
 
 # More info
 EthereumJ [Here](http://ethdocs.org/en/latest/ethereum-clients/ethereumj/index.html#ethereum-j)
-Solidity [Here] (https://solidity.readthedocs.io/en/develop/)
+
+Solidity [Here](https://solidity.readthedocs.io/en/develop/)
+
