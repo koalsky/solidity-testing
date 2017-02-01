@@ -9,7 +9,6 @@ import java.math.BigInteger;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import org.adridadou.ethereum.EthereumFacade;
-import org.adridadou.ethereum.blockchain.EthereumJTest;
 import org.adridadou.ethereum.blockchain.EthereumProxy;
 import org.adridadou.ethereum.blockchain.EthereumProxyEthereumJ;
 import org.adridadou.ethereum.blockchain.TestConfig;
@@ -31,7 +30,7 @@ import org.junit.Test;
  * Test Class based on EthereumProviderTest
  */
 public class DelegateContractTest {
-	private final EthereumJTest ethereumj = new EthereumJTest(TestConfig.builder().build());
+	private final EthereumJHomesteadTest ethereumj = new EthereumJHomesteadTest(TestConfig.builder().build());
 	private final InputTypeHandler inputTypeHandler = new InputTypeHandler();
 	private final OutputTypeHandler outputTypeHandler = new OutputTypeHandler();
 	private final EthereumEventHandler handler = new EthereumEventHandler(ethereumj);

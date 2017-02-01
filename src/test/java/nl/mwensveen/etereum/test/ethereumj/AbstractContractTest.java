@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.net.URL;
 import org.ethereum.config.SystemProperties;
-import org.ethereum.config.blockchain.FrontierConfig;
+import org.ethereum.config.blockchain.HomesteadConfig;
 import org.ethereum.util.blockchain.SolidityContract;
 import org.ethereum.util.blockchain.StandaloneBlockchain;
 import org.junit.Before;
@@ -30,9 +30,9 @@ public abstract class AbstractContractTest {
 	 */
 	@BeforeClass
 	public static void initalize() {
-		// need to modify the default Frontier settings to keep the blocks difficulty
+		// need to modify the default Homestead settings to keep the blocks difficulty
 		// low to not waste a lot of time for block mining
-		SystemProperties.getDefault().setBlockchainConfig(new FrontierConfig(new FrontierConfig.FrontierConstants() {
+		SystemProperties.getDefault().setBlockchainConfig(new HomesteadConfig(new HomesteadConfig.HomesteadConstants() {
 			@Override
 			public BigInteger getMINIMUM_DIFFICULTY() {
 				return BigInteger.ONE;
