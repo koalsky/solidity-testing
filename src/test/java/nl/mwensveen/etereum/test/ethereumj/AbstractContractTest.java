@@ -71,11 +71,15 @@ public abstract class AbstractContractTest {
 		// internally generates the block with this transaction and returns the
 		// contract interface
 
-		SolidityContract createdContract = blockChain.submitNewContract(contractSrc, getConstructorArgs());
+		SolidityContract createdContract = blockChain.submitNewContract(contractSrc, getContractName(), getConstructorArgs());
 		System.out.println("Contract created");
 		System.out.println("on address: " + BaseEncoding.base16().encode(createdContract.getAddress()));
 		System.out.println("ABI: " + createdContract.getABI());
 		return createdContract;
+	}
+
+	protected String getContractName() {
+		return null;
 	}
 
 	/**
